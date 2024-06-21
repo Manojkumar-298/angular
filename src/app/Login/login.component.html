@@ -1,0 +1,97 @@
+<!-- 
+<section class="vh-100  gradient-custom">
+  <div class="container py-0 h-100">
+   
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark  text-white">
+        <a class="navbar-brand m-2" href="#">UI-app</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" [routerLink]="['/login']">Home </a>
+            <a class="nav-item nav-link" [routerLink]="['/register']">register</a>
+            <a class="nav-item nav-link" [routerLink]="['/table']">users</a>
+          </div>
+        </div>
+      </nav>
+     
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card card-body p-5 text-center bg-dark text-white" style="border-radius: 1rem;">
+          <form name="form" (ngSubmit)="f.form.valid && onSubmit()"id="form" #f="ngForm" novalidate>
+           
+            <div class="mb-md-3 mt-md-3 pb-5">
+              <h2 class="fw-bold mb-2 text-uppercase log" id="heading">Login</h2>
+              <div class="form-outline form-group form-white mb-3">
+                <label class="form-label" for="username">Username</label>
+                <input type="text" class="form-control"  id="username" name="username"  [(ngModel)]="form.username"  required  #username="ngModel" [ngClass]="{ 'is-invalid': f.submitted && username.errors }" />
+                <div *ngIf="username.errors && f.submitted" class="invalid-feedback text-white">Username is required!</div>
+              </div>
+              <div class="form-outline form-group form-white mb-3">
+                <label class="form-label" for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />  
+                <div *ngIf="password.errors && f.submitted" class="invalid-feedback text-white">
+                  <div *ngIf="password.errors['required']">Password is required</div>
+                  <div *ngIf="password.errors['minlength']" class="text-white">Password must be at least 6 characters</div>
+                </div>
+              </div>
+              <tr><p class="small mb-3 pb-lg-2"><a class="text-white-50" id="rlink" [routerLink]="['/forgetpassword']">Forgot password?</a></p></tr>
+              <tr> <button  class="btn btn-outline-light btn-lg px-5" >login</button></tr>
+            </div>
+            <tr>
+              <ul class="linklist">
+                <li><p class="mb-0">Don't have an account? <a id="rlink1" [routerLink]="['/register']" class="text-white-50 fw-bold click">Sign Up</a></p></li>
+              </ul>
+            </tr>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white w-100">
+  <a class="navbar-brand m-2" href="#">UI-app</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" [routerLink]="['/login']">Home</a>
+      <a class="nav-item nav-link" [routerLink]="['/register']">Register</a>
+      <a class="nav-item nav-link" [routerLink]="['/table']">Users</a>
+    </div>
+  </div>
+</nav>
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5 mt-4">
+        <div class="card card-body p-5 text-center bg-dark text-white">
+          <form name="form" (ngSubmit)="f.form.valid && onSubmit()" id="form" #f="ngForm" novalidate>
+            <div class="mb-md-3 mt-md-3 pb-3">
+              <h2 class="fw-bold mb-2 text-uppercase log" id="heading">Login</h2>
+              <div class="form-outline form-group form-white mb-3">
+                <label class="form-label" for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" [(ngModel)]="form.username" required #username="ngModel" [ngClass]="{ 'is-invalid': f.submitted && username.errors }" />
+                <div *ngIf="username.errors && f.submitted" class="invalid-feedback text-white">Username is required!</div>
+              </div>
+              <div class="form-outline form-group form-white mb-3">
+                <label class="form-label" for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />
+                <div *ngIf="password.errors && f.submitted" class="invalid-feedback text-white">
+                  <div *ngIf="password.errors['required']">Password is required</div>
+                  <div *ngIf="password.errors['minlength']" class="text-white">Password must be at least 6 characters</div>
+                </div>
+              </div>
+              <p class="small mb-3 pb-lg-2"><a class="text-white-50" id="rlink" [routerLink]="['/forgetpassword']">Forgot password?</a></p>
+              <button class="btn btn-outline-light btn-lg px-5">Login</button>
+            </div>
+            <p class="mb-0">Don't have an account? <a id="rlink1" [routerLink]="['/register']" class="text-white-50 fw-bold click">Sign Up</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

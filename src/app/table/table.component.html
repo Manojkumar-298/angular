@@ -1,0 +1,40 @@
+
+<div class="vh-100 gradient-custom bg-opacity-40">
+  <div class="container py-3  h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  text-white">
+      <a class="navbar-brand m-2" href="#">UI-app</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" id="home" [routerLink]="['/login']">Home </a>
+          <a class="nav-item nav-link" [routerLink]="['/register']">register</a>
+          <a class="nav-item nav-link" [routerLink]="['/table']">users</a>
+        </div>
+      </div>
+    </nav>
+    <div class="card bg-dark text-white mb-4 mt-5">
+      <div class="card-body">
+        <table>
+          <tbody>
+            <tr>
+              <th class="col-sm-3">username</th>
+              <th class="col-sm-3">email</th>
+              <th class="col-sm-3">phone</th>
+              <th class="col-sm-3">address</th>
+              <hr>
+            </tr>
+            <tr *ngFor="let user of users">
+              <td class="col-sm-3">{{user.username}}</td>
+              <td class="col-sm-4">{{user.email}}</td>
+              <td class="col-sm-3">{{user.phone}}</td>
+              <td class="col-sm-3">{{user.address}}</td>
+              <hr>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
